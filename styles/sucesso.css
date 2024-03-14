@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap');
+
+:root {
+    --rosa-escuro: #8B008B;
+    --rosa-medio: #FF1493;
+    --azul-claro: #1E90FF;
+    --branco: #ffffff;
+    --azul-escuro: #00008B;
+
+    --texto-secundario: #00008B;
+    --fundo-pagina: #ffffff;
+    --rodape-texto: #f3efef;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Dosis", sans-serif;
+}
+
+body{
+    background: var(--fundo-pagina);
+}
+
+main{
+    width: 70vw;
+    height: 95vh;
+    text-align: justify;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    color: var(--texto-secundario);
+}
+
+main img{
+    width: 20%;
+}
+
+.botao button{
+    text-decoration: none;
+    background: none;
+    border: none;
+    color: var(--azul-escuro);
+    font-weight: bold;
+}
+
+.botao{
+    text-align: center;
+    background: linear-gradient(to right, aqua, var(--rosa-escuro), var(--rosa-medio));
+    border: none;
+    border-radius: 0.3rem;
+    padding: 0.3rem;
+    opacity: 0.6;
+}
+
+.botao:hover, .botao:hover button{
+    opacity: 1;
+    color: var(--branco);
+}
+
+footer{
+    width: 100vw;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, aqua, var(--rosa-escuro), var(--rosa-medio));
+    color: var(--rodape-texto);
+}

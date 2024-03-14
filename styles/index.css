@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap');
+
+@keyframes fade-in {
+    0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+/* Variáveis */
+
+:root {
+    --rosa-escuro: #8B008B;
+    --branco: #ffffff;
+    --rosa-medio: #FF1493;
+    --azul-escuro: #00008B;
+    --cinza-claro: #f3efef;
+    --azul-claro: #1E90FF;
+    
+    --titulo-principal: #FF1493;
+    --texto-principal: #8B008B;
+    --texto-secundario: #00008B;
+    --fundo-pagina: #ffffff;
+    --fundo-pagina-secundario: #f3efef;
+    --elemento-interativo: #2db2d3;
+    --rodape-fundo: #1b1b85;
+    --rodape-texto: #f3efef;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Dosis", sans-serif;
+}
+
+h1, h2 {
+    color: var(--titulo-principal);
+}
+  
+body {
+    color: var(--texto-secundario);
+    background-color: var(--fundo-pagina);
+}
+
+/* Ícones */
+
+ .icone{
+    color: var(--elemento-interativo);
+}
+  
+.icone:hover i, .icone:hover{
+    color: var(--rosa-medio);
+}
+
+/* Botões */
+
+.botao{
+    text-decoration: none;
+    text-align: center;
+    background: linear-gradient(to right, aqua, var(--rosa-escuro), var(--rosa-medio));
+    color: var(--azul-escuro);
+    border: none;
+    border-radius: 0.3rem;
+    padding: 0.3rem;
+    opacity: 0.6;
+    font-weight: bold;
+}
+
+.botao:hover{
+    opacity: 1;
+    color: var(--branco);
+}
+
+/* Navbar/Menu */
+
+.navbar {
+    height: 10vh;
+    background-color: var(--fundo-pagina-secundario); 
+    opacity: 0.9;
+    color: var(--texto-principal); 
+}
+  
+.nav-link {
+    color: var(--texto-secundario); 
+}
+  
+.nav-link:hover, .nav-link:active {
+    background-color: var(--rosa-medio);
+    color:  var(--branco); 
+    border-radius: 0.2rem;
+}
+
+.menu a img{
+    cursor:auto;
+}
+
+/* Início */
+
+.img_inicio{
+    border-radius: 50%;
+} 
+
+#inicio{
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-self: center;
+}
+
+#inicio h1, h3{
+    background-image: linear-gradient(to right, aqua,  var(--rosa-medio));
+    background-clip: text;
+    -webkit-background-clip: text; /* Para compatibilidade com navegadores WebKit */
+    color: transparent; /* Torna o texto invisível */
+}
+
+/* Sobre-mim */
+
+#sobre-mim p{
+    text-indent: 2.5rem;
+    text-align: justify;
+}
+
+/* Certificações */
+
+.card h3{
+    color: var(--titulo-principal);
+}
+
+.card span a{
+    color: var(--elemento-interativo);
+}
+
+/* Habilidades */
+
+#habilidades img{
+    width: 4rem;
+}
+
+.box-habilidades{
+    width: 8rem;
+    margin: 2rem 1rem 0rem 1rem;
+    /* border: .1rem solid; */
+    padding: 1rem;
+    border-top-left-radius: 2rem;
+    background-color: var(--cinza-claro);
+    border-bottom: .4rem solid transparent; /* Define a largura da borda inferior*/
+    border-image: linear-gradient(to right, var(--rosa-medio), var(--rosa-escuro)) 1; /* Gradiente linear da borda inferior */
+}
+
+.box-habilidades:hover{  
+    transform: scale(1.1);/* aumentar em 10% o tamanho */
+    background-color:  rgba(235, 34, 188, 0.26);    
+    cursor:auto;
+    transition: 2s;
+}
+
+/* Projetos */
+
+.carousel-inner{
+    padding: 1rem;
+    /* width: 50vw;
+    margin: auto; */
+}
+
+.card{
+    margin: 1rem;
+    box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+    border: none;
+    color: var(--texto-secundario);
+}
+
+.card-body h5{
+    color: var(--titulo-principal);
+}
+
+.carousel-control-prev, .carousel-control-next{
+    background:linear-gradient(to right, var(--rosa-medio), var(--rosa-escuro)) ;
+    width: 4vh;
+    height: 4vh;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-right: 10%;
+    margin-left: 10%;
+}
+
+/* Modal */
+
+.modal-body p{
+    text-align: justify;
+}
+
+/* Formulário */
+
+input[type=text], input[type=subject], input[type=email], textarea {
+    background-color: var(--cinza-claro) !important; /* Cor de fundo do campo de entrada */
+    color: var(--azul-claro) !important; /* Cor do texto dentro do campo de entrada */
+    border: 1px solid var(--rosa-escuro) !important; /* Cor da borda do campo de entrada */
+}
+
+input[type=text]:focus, input[type=subject]:focus, input[type=email]:focus, textarea:focus {
+    border-color: var(--rosa-medio) !important; /* Cor da borda do campo de entrada quando está focado */
+}
+
+/* Rodapé */
+
+footer {
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, aqua, var(--rosa-escuro), var(--rosa-medio));
+    color: var(--rodape-texto);
+}
+
+/* Botão para voltar ao início */
+
+.botao-topo img{
+    width: 3rem;
+    background-color: var(--elemento-interativo);
+    padding: 0.2rem;
+    border-radius: 0.2rem;
+}
+
+.botao-topo{
+    visibility: hidden;
+}
+
+.botao-topo-mostrar{
+    visibility: visible;
+    animation: fade-in 0.7 ease-in forwards;
+}
